@@ -258,7 +258,7 @@ Reinstall to restore the DefaultInput.cfg file.</value>
     <value>Graphics Adapter</value>
   </data>
   <data name="AA_label" xml:space="preserve">
-    <value>Antialiasing</value>
+    <value>Antialiasing (FXAA)</value>
   </data>
   <data name="AudioDevice_label" xml:space="preserve">
     <value>Audio Device</value>

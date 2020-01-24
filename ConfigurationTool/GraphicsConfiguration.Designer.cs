@@ -22,7 +22,6 @@ namespace Generations_Launcher_Front
 		private void InitializeComponent()
 		{
 			ComponentResourceManager componentResourceManager = new ComponentResourceManager(typeof(GraphicsConfiguration));
-			this.Graphics_Label = new Label();
 			this.Adapter_Combo = new ComboBox();
 			this.Resolution_Combo = new ComboBox();
 			this.AA_Combo = new ComboBox();
@@ -45,11 +44,6 @@ namespace Generations_Launcher_Front
 			this.vsync_label = new Label();
 			((ISupportInitialize)this.pictureBox1).BeginInit();
 			base.SuspendLayout();
-			this.Graphics_Label.Location = new Point(3, 0);
-			this.Graphics_Label.Name = "Graphics_Label";
-			this.Graphics_Label.Size = new Size(306, 39);
-			this.Graphics_Label.TabIndex = 0;
-			this.Graphics_Label.Text = "Graphics Configuration";
 			this.Adapter_Combo.DropDownStyle = ComboBoxStyle.DropDownList;
 			this.Adapter_Combo.FormattingEnabled = true;
 			this.Adapter_Combo.Location = new Point(20, 48);
@@ -72,19 +66,19 @@ namespace Generations_Launcher_Front
 			this.AA_Combo.TabIndex = 3;
 			this.AA_Combo.SelectedIndexChanged += this.AA_Combo_SelectedIndexChanged;
 			this.Adapter_label.AutoSize = true;
-			this.Adapter_label.Location = new Point(27, 32);
+			this.Adapter_label.Location = new Point(20, 32);
 			this.Adapter_label.Name = "Adapter_label";
 			this.Adapter_label.Size = new Size(89, 13);
 			this.Adapter_label.TabIndex = 4;
 			this.Adapter_label.Text = "Graphics Adapter";
 			this.Res_label.AutoSize = true;
-			this.Res_label.Location = new Point(27, 82);
+			this.Res_label.Location = new Point(20, 82);
 			this.Res_label.Name = "Res_label";
 			this.Res_label.Size = new Size(57, 13);
 			this.Res_label.TabIndex = 5;
 			this.Res_label.Text = "Resolution";
 			this.AA_label.AutoSize = true;
-			this.AA_label.Location = new Point(27, 132);
+			this.AA_label.Location = new Point(20, 132);
 			this.AA_label.Name = "AA_label";
 			this.AA_label.Size = new Size(61, 13);
 			this.AA_label.TabIndex = 6;
@@ -119,7 +113,7 @@ namespace Generations_Launcher_Front
 			this.NoAdapterWarning_label.TextAlign = ContentAlignment.MiddleCenter;
 			this.NoAdapterWarning_label.Visible = false;
 			this.DisplayMode_Label.AutoSize = true;
-			this.DisplayMode_Label.Location = new Point(27, 182);
+			this.DisplayMode_Label.Location = new Point(20, 182);
 			this.DisplayMode_Label.Name = "DisplayMode_Label";
 			this.DisplayMode_Label.Size = new Size(71, 13);
 			this.DisplayMode_Label.TabIndex = 10;
@@ -165,12 +159,12 @@ namespace Generations_Launcher_Front
 			this.Reflection_Combo.Size = new Size(300, 21);
 			this.Reflection_Combo.TabIndex = 15;
 			this.Reflection_Combo.SelectedIndexChanged += this.Reflection_Combo_SelectedIndexChanged;
-			this.Shadow_Label.Location = new Point(27, 232);
+			this.Shadow_Label.Location = new Point(20, 232);
 			this.Shadow_Label.Name = "Shadow_Label";
 			this.Shadow_Label.Size = new Size(128, 16);
 			this.Shadow_Label.TabIndex = 16;
 			this.Shadow_Label.Text = "shadow_label1";
-			this.Reflection_Label.Location = new Point(27, 282);
+			this.Reflection_Label.Location = new Point(20, 282);
 			this.Reflection_Label.Name = "Reflection_Label";
 			this.Reflection_Label.Size = new Size(144, 15);
 			this.Reflection_Label.TabIndex = 17;
@@ -189,7 +183,7 @@ namespace Generations_Launcher_Front
 			this.Vsync_combo.TabIndex = 19;
 			this.Vsync_combo.SelectedIndexChanged += this.Vsync_combo_SelectedIndexChanged;
 			this.vsync_label.AutoSize = true;
-			this.vsync_label.Location = new Point(27, 332);
+			this.vsync_label.Location = new Point(20, 332);
 			this.vsync_label.Name = "vsync_label";
 			this.vsync_label.Size = new Size(63, 13);
 			this.vsync_label.TabIndex = 20;
@@ -216,7 +210,6 @@ namespace Generations_Launcher_Front
 			base.Controls.Add(this.AA_Combo);
 			base.Controls.Add(this.Resolution_Combo);
 			base.Controls.Add(this.Adapter_Combo);
-			base.Controls.Add(this.Graphics_Label);
 			base.Controls.Add(this.pictureBox1);
 			base.Name = "GraphicsConfiguration";
 			base.Size = new Size(846, 460);
@@ -421,7 +414,6 @@ namespace Generations_Launcher_Front
 
 		private void DressText()
 		{
-			this.Graphics_Label.Text = LocalizedText.Graphics_Label;
 			this.Adapter_label.Text = LocalizedText.Adapter_label;
 			this.Res_label.Text = LocalizedText.Res_label;
 			this.AA_label.Text = LocalizedText.AA_label;
@@ -534,8 +526,6 @@ namespace Generations_Launcher_Front
 		}
 
 		private IContainer components;
-
-		private Label Graphics_Label;
 
 		private ComboBox Adapter_Combo;
 

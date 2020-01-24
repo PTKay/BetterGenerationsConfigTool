@@ -1,4 +1,6 @@
-﻿namespace Generations_Launcher_Front
+﻿using Generations_Launcher_Front.Properties;
+
+namespace Generations_Launcher_Front
 {
 	public partial class MainForm : global::System.Windows.Forms.Form
 	{
@@ -12,7 +14,8 @@
 		}
 
 		private void InitializeComponent()
-		{
+        {
+            this.Icon = Resources.SystemTray;
 			this.TabWindow = new global::System.Windows.Forms.TabControl();
 			this.tabPage1 = new global::System.Windows.Forms.TabPage();
 			this.tabPage2 = new global::System.Windows.Forms.TabPage();

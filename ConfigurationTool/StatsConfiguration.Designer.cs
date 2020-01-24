@@ -100,12 +100,7 @@ namespace Generations_Launcher_Front
 
 		private void CheckChange(object sender, EventArgs e)
 		{
-			if (this.AnalyticsGlobalCheck.Checked)
-			{
-				GlobalDefs.AnalyticsEnabled = true;
-				return;
-			}
-			GlobalDefs.AnalyticsEnabled = false;
+			GlobalDefs.AnalyticsEnabled = this.AnalyticsGlobalCheck.Checked;
 		}
 
 		private void checkBox1_CheckedChanged(object sender, EventArgs e)
