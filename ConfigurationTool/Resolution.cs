@@ -15,27 +15,7 @@ public struct Resolution
 	}
 
 	public string DisplayName => $"{Width} x {Height} ({Refresh} hz)";
-
-	/*
-			string str = "";
-			if (this.Width >= 1000)
-			{
-				str = str + this.Width.ToString() + "   x  ";
-			}
-			else
-			{
-				str = str + "  " + this.Width.ToString() + "   x  ";
-			}
-			if (this.Height >= 1000)
-			{
-				str = str + this.Height.ToString() + "  :  ";
-			}
-			else
-			{
-				str = str + " " + this.Height.ToString() + "   :  ";
-			}
-			return str + this.Refresh.ToString();
-			*/
+	
 	public int Width;
 
 	public int Height;
