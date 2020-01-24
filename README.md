@@ -9,3 +9,5 @@ Fixes so far:
 - Removed repeated title in Graphics Configuration pane
 - Added system tray icon
 - Changed name of the Antialiasing setting to "Antialiasing (FXAA)"
+- Improved resolution list
+- Improved algorithm to set global definition of the analytics option
