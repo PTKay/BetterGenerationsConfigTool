@@ -120,6 +120,7 @@ public class FileHandler
 		this.SaveGraphicsConfiguration();
 		this.SaveAudioConfiguration();
 		this.SaveStatsConfiguration();
+		this.SaveAdvancedConfiguration();
 		return true;
 	}
 
@@ -174,10 +175,7 @@ public class FileHandler
 		GlobalDefs.OutputAdapter.ReflectQuality = (regex2.Replace(array[7], string.Empty) == "1");
 		GlobalDefs.OutputAdapter.DisplayMode = (regex2.Replace(array[8], string.Empty) == "1");
 		string text = array[9];
-		string[] array3 = text.Split(new char[]
-		{
-			'-'
-		});
+		string[] array3 = text.Split('-');
 		if (array3.Length != 5 || array3[0].Length != 8 || array3[1].Length != 4 || array3[2].Length != 4 || array3[3].Length != 4 || array3[4].Length != 12)
 		{
 			return false;
@@ -185,7 +183,6 @@ public class FileHandler
 		GlobalDefs.OutputAdapter.DeviceGUID = new Guid(text);
 		GlobalDefs.OutputAdapter.AdapterID = array[10];
 		GlobalDefs.OutputAdapter.DepthFormat = Convert.ToUInt32(regex.Replace(array[11], string.Empty));
-		GlobalDefs.OutputAdapter.bWindowed = false;
 		GlobalDefs.OutputAdapter.ValidAdapter = true;
 		return true;
 	}

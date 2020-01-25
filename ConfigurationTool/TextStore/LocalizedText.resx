@@ -240,7 +240,7 @@ Reinstall to restore the DefaultInput.cfg file.</value>
     <value>Save</value>
   </data>
   <data name="Cancel_Button" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Quit</value>
   </data>
   <data name="Keyboard_Back" xml:space="preserve">
     <value>Back</value>

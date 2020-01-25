@@ -28,13 +28,9 @@ namespace Generations_Launcher_Front
 			this.Adapter_label = new Label();
 			this.Res_label = new Label();
 			this.AA_label = new Label();
-			this.VSync_Check = new CheckBox();
-			this.Windowed_Check = new CheckBox();
 			this.NoAdapterWarning_label = new Label();
 			this.DisplayMode_Label = new Label();
 			this.DispMode_combo = new ComboBox();
-			this.Shadow_Check = new CheckBox();
-			this.Reflection_Check = new CheckBox();
 			this.Shadow_Combo = new ComboBox();
 			this.Reflection_Combo = new ComboBox();
 			this.Shadow_Label = new Label();
@@ -70,46 +66,22 @@ namespace Generations_Launcher_Front
 			this.Adapter_label.Name = "Adapter_label";
 			this.Adapter_label.Size = new Size(89, 13);
 			this.Adapter_label.TabIndex = 4;
-			this.Adapter_label.Text = "Graphics Adapter";
 			this.Res_label.AutoSize = true;
 			this.Res_label.Location = new Point(20, 82);
 			this.Res_label.Name = "Res_label";
 			this.Res_label.Size = new Size(57, 13);
 			this.Res_label.TabIndex = 5;
-			this.Res_label.Text = "Resolution";
 			this.AA_label.AutoSize = true;
 			this.AA_label.Location = new Point(20, 132);
 			this.AA_label.Name = "AA_label";
 			this.AA_label.Size = new Size(61, 13);
 			this.AA_label.TabIndex = 6;
-			this.AA_label.Text = "AntiAliasing";
-			this.VSync_Check.AutoSize = true;
-			this.VSync_Check.Enabled = false;
-			this.VSync_Check.Location = new Point(159, 438);
-			this.VSync_Check.Name = "VSync_Check";
-			this.VSync_Check.Size = new Size(75, 17);
-			this.VSync_Check.TabIndex = 7;
-			this.VSync_Check.Text = "V-Sync on";
-			this.VSync_Check.UseVisualStyleBackColor = true;
-			this.VSync_Check.Visible = false;
-			this.VSync_Check.CheckedChanged += this.VSync_Check_CheckedChanged;
-			this.Windowed_Check.AutoSize = true;
-			this.Windowed_Check.Enabled = false;
-			this.Windowed_Check.Location = new Point(412, 438);
-			this.Windowed_Check.Name = "Windowed_Check";
-			this.Windowed_Check.Size = new Size(141, 17);
-			this.Windowed_Check.TabIndex = 8;
-			this.Windowed_Check.Text = "Run in Windowed Mode";
-			this.Windowed_Check.UseVisualStyleBackColor = true;
-			this.Windowed_Check.Visible = false;
-			this.Windowed_Check.CheckedChanged += this.Windowed_Check_CheckedChanged;
 			this.NoAdapterWarning_label.Font = new Font("Microsoft Sans Serif", 11.25f, FontStyle.Bold, GraphicsUnit.Point, 0);
 			this.NoAdapterWarning_label.ForeColor = Color.DarkRed;
 			this.NoAdapterWarning_label.Location = new Point(370, 131);
 			this.NoAdapterWarning_label.Name = "NoAdapterWarning_label";
 			this.NoAdapterWarning_label.Size = new Size(237, 101);
 			this.NoAdapterWarning_label.TabIndex = 9;
-			this.NoAdapterWarning_label.Text = "No Compatible Graphics Adapter Found";
 			this.NoAdapterWarning_label.TextAlign = ContentAlignment.MiddleCenter;
 			this.NoAdapterWarning_label.Visible = false;
 			this.DisplayMode_Label.AutoSize = true;
@@ -117,7 +89,6 @@ namespace Generations_Launcher_Front
 			this.DisplayMode_Label.Name = "DisplayMode_Label";
 			this.DisplayMode_Label.Size = new Size(71, 13);
 			this.DisplayMode_Label.TabIndex = 10;
-			this.DisplayMode_Label.Text = "Display Mode";
 			this.DispMode_combo.DropDownStyle = ComboBoxStyle.DropDownList;
 			this.DispMode_combo.FormattingEnabled = true;
 			this.DispMode_combo.Location = new Point(20, 198);
@@ -125,26 +96,6 @@ namespace Generations_Launcher_Front
 			this.DispMode_combo.Size = new Size(300, 21);
 			this.DispMode_combo.TabIndex = 11;
 			this.DispMode_combo.SelectedIndexChanged += this.DispMode_combo_SelectedIndexChanged;
-			this.Shadow_Check.AutoSize = true;
-			this.Shadow_Check.Enabled = false;
-			this.Shadow_Check.Location = new Point(240, 440);
-			this.Shadow_Check.Name = "Shadow_Check";
-			this.Shadow_Check.Size = new Size(80, 17);
-			this.Shadow_Check.TabIndex = 12;
-			this.Shadow_Check.Text = "checkBox1";
-			this.Shadow_Check.UseVisualStyleBackColor = true;
-			this.Shadow_Check.Visible = false;
-			this.Shadow_Check.CheckedChanged += this.Shadow_Check_CheckedChanged;
-			this.Reflection_Check.AutoSize = true;
-			this.Reflection_Check.Enabled = false;
-			this.Reflection_Check.Location = new Point(326, 440);
-			this.Reflection_Check.Name = "Reflection_Check";
-			this.Reflection_Check.Size = new Size(80, 17);
-			this.Reflection_Check.TabIndex = 13;
-			this.Reflection_Check.Text = "checkBox1";
-			this.Reflection_Check.UseVisualStyleBackColor = true;
-			this.Reflection_Check.Visible = false;
-			this.Reflection_Check.CheckedChanged += this.Reflection_Check_CheckedChanged;
 			this.Shadow_Combo.DropDownStyle = ComboBoxStyle.DropDownList;
 			this.Shadow_Combo.FormattingEnabled = true;
 			this.Shadow_Combo.Location = new Point(20, 248);
@@ -163,12 +114,10 @@ namespace Generations_Launcher_Front
 			this.Shadow_Label.Name = "Shadow_Label";
 			this.Shadow_Label.Size = new Size(128, 16);
 			this.Shadow_Label.TabIndex = 16;
-			this.Shadow_Label.Text = "shadow_label1";
 			this.Reflection_Label.Location = new Point(20, 282);
 			this.Reflection_Label.Name = "Reflection_Label";
 			this.Reflection_Label.Size = new Size(144, 15);
 			this.Reflection_Label.TabIndex = 17;
-			this.Reflection_Label.Text = "reflection_label1";
 			this.pictureBox1.Image = (Image)componentResourceManager.GetObject("pictureBox1.Image");
 			this.pictureBox1.Location = new Point(0, 0);
 			this.pictureBox1.Name = "pictureBox1";
@@ -187,23 +136,17 @@ namespace Generations_Launcher_Front
 			this.vsync_label.Name = "vsync_label";
 			this.vsync_label.Size = new Size(63, 13);
 			this.vsync_label.TabIndex = 20;
-			this.vsync_label.Text = "vsync_label";
 			base.AutoScaleDimensions = new SizeF(6f, 13f);
 			base.AutoScaleMode = AutoScaleMode.Font;
-			base.BorderStyle = BorderStyle.FixedSingle;
 			base.Controls.Add(this.vsync_label);
 			base.Controls.Add(this.Vsync_combo);
 			base.Controls.Add(this.Reflection_Label);
 			base.Controls.Add(this.Shadow_Label);
 			base.Controls.Add(this.Reflection_Combo);
 			base.Controls.Add(this.Shadow_Combo);
-			base.Controls.Add(this.Reflection_Check);
-			base.Controls.Add(this.Shadow_Check);
 			base.Controls.Add(this.DispMode_combo);
 			base.Controls.Add(this.DisplayMode_Label);
 			base.Controls.Add(this.NoAdapterWarning_label);
-			base.Controls.Add(this.Windowed_Check);
-			base.Controls.Add(this.VSync_Check);
 			base.Controls.Add(this.AA_label);
 			base.Controls.Add(this.Res_label);
 			base.Controls.Add(this.Adapter_label);
@@ -254,9 +197,9 @@ namespace Generations_Launcher_Front
 				this.mShadowList.Add(item2);
 				this.mReflectionList.Add(item2);
 				OnOff item3 = default(OnOff);
-				item3.bVsync = true;
+				item3.bIsOn = true;
 				this.mVsyncList.Add(item3);
-				item3.bVsync = false;
+				item3.bIsOn = false;
 				this.mVsyncList.Add(item3);
 				for (int i = 0; i < num; i++)
 				{
@@ -321,7 +264,6 @@ namespace Generations_Launcher_Front
 				bool flag4;
 				if (GlobalDefs.GraphicsConfigFileRead)
 				{
-					this.Windowed_Check.Checked = GlobalDefs.OutputAdapter.bWindowed;
 					flag = GlobalDefs.OutputAdapter.ShadQuality;
 					flag2 = GlobalDefs.OutputAdapter.ReflectQuality;
 					flag3 = GlobalDefs.OutputAdapter.DisplayMode;
@@ -329,8 +271,6 @@ namespace Generations_Launcher_Front
 				}
 				else
 				{
-					this.Windowed_Check.Checked = true;
-					this.VSync_Check.Checked = true;
 					flag = true;
 					flag2 = true;
 					flag3 = false;
@@ -391,7 +331,6 @@ namespace Generations_Launcher_Front
 				this.Adapter_Combo.Enabled = false;
 				this.Resolution_Combo.Enabled = false;
 				this.AA_Combo.Enabled = false;
-				this.VSync_Check.Enabled = false;
 				this.DispMode_combo.Enabled = false;
 				this.Shadow_Combo.Enabled = false;
 				this.Reflection_Combo.Enabled = false;
@@ -417,9 +356,7 @@ namespace Generations_Launcher_Front
 			this.Adapter_label.Text = LocalizedText.Adapter_label;
 			this.Res_label.Text = LocalizedText.Res_label;
 			this.AA_label.Text = LocalizedText.AA_label;
-			this.VSync_Check.Text = LocalizedText.VSync_Check;
 			this.vsync_label.Text = LocalizedText.VSync_Check;
-			this.Windowed_Check.Text = LocalizedText.Windowed_Check;
 			this.NoAdapterWarning_label.Text = LocalizedText.NoValidAdapter_Label;
 			this.Shadow_Label.Text = LocalizedText.Shadow_Check;
 			this.Reflection_Label.Text = LocalizedText.Reflection_Check;
@@ -487,27 +424,9 @@ namespace Generations_Launcher_Front
 			}
 		}
 
-		private void VSync_Check_CheckedChanged(object sender, EventArgs e)
-		{
-			GlobalDefs.OutputAdapter.bVSync = this.VSync_Check.Checked;
-		}
-
-		private void Windowed_Check_CheckedChanged(object sender, EventArgs e)
-		{
-			GlobalDefs.OutputAdapter.bWindowed = this.Windowed_Check.Checked;
-		}
-
 		private void DispMode_combo_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			GlobalDefs.OutputAdapter.DisplayMode = (this.DispMode_combo.SelectedIndex == 1);
-		}
-
-		private void Shadow_Check_CheckedChanged(object sender, EventArgs e)
-		{
-		}
-
-		private void Reflection_Check_CheckedChanged(object sender, EventArgs e)
-		{
 		}
 
 		private void Shadow_Combo_SelectedIndexChanged(object sender, EventArgs e)
@@ -539,19 +458,11 @@ namespace Generations_Launcher_Front
 
 		private Label AA_label;
 
-		private CheckBox VSync_Check;
-
-		private CheckBox Windowed_Check;
-
 		private Label NoAdapterWarning_label;
 
 		private Label DisplayMode_Label;
 
 		private ComboBox DispMode_combo;
-
-		private CheckBox Shadow_Check;
-
-		private CheckBox Reflection_Check;
 
 		private ComboBox Shadow_Combo;
 

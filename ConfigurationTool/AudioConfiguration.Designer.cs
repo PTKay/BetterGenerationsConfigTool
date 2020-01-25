@@ -83,10 +83,8 @@ namespace Generations_Launcher_Front
             string description = GlobalDefs.OutputAudio.description;
             this.mAudiosAdapterList.Clear();
             int num = DllExterns._PopulateDeviceList();
-            GlobalDefs.NoOfAudioAdapters = 0;
             if (num > 0)
             {
-                GlobalDefs.NoOfAudioAdapters = num - 1;
                 this.Audio_Combo.Enabled = true;
                 AudioInfo item = default(AudioInfo);
                 item.description = LocalizedText.None_Combo;

@@ -1016,7 +1016,6 @@ namespace Generations_Launcher_Front
 			this.StartButtonInstructions_Label.TextAlign = ContentAlignment.MiddleCenter;
 			base.AutoScaleDimensions = new SizeF(6f, 13f);
 			base.AutoScaleMode = AutoScaleMode.Font;
-			base.BorderStyle = BorderStyle.FixedSingle;
 			base.Controls.Add(this.StartButtonInstructions_Label);
 			base.Controls.Add(this.Instructions_label);
 			base.Controls.Add(this.ResetDefaultButton);

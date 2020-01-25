@@ -166,7 +166,7 @@ namespace Generations_Launcher_Front.TextStore {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cancel.
+        ///   Looks up a localized string similar to Quit.
         /// </summary>
         public static string Cancel_Button {
             get {

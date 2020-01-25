@@ -18,9 +18,9 @@ public class OutputConfig
 
 	public string mProductName;
 
-	public int[] mAxisMap;
+	public readonly int[] mAxisMap;
 
-	public int[] mButtonMap;
+	public readonly int[] mButtonMap;
 
 	public int mDeadZone;
 

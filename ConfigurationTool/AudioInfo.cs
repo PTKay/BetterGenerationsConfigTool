@@ -4,13 +4,7 @@ using System.Runtime.InteropServices;
 [StructLayout(LayoutKind.Sequential, Pack = 1)]
 public struct AudioInfo
 {
-	public string DisplayName
-	{
-		get
-		{
-			return this.description;
-		}
-	}
+	public string DisplayName => this.description;
 
 	public Guid AudioGuid;
 

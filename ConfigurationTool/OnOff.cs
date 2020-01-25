@@ -5,18 +5,8 @@ namespace Generations_Launcher_Front
 {
 	public struct OnOff
 	{
-		public string DisplayName
-		{
-			get
-			{
-				if (this.bVsync)
-				{
-					return LocalizedText.On_combo;
-				}
-				return LocalizedText.Off_combo;
-			}
-		}
+		public string DisplayName => this.bIsOn ? LocalizedText.On_combo : LocalizedText.Off_combo;
 
-		public bool bVsync;
+		public bool bIsOn;
 	}
 }

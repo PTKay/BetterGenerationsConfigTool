@@ -6,7 +6,6 @@ public class GlobalDefs
 	public GlobalDefs()
 	{
 		GlobalDefs.GraphicsConfigFileRead = false;
-		this.mResetPadList = false;
 		this.KEYBOARD_GUID = new Guid("00000001-0000-0000-0000-000000000000");
 		this.ZERO_GUID = new Guid("00000000-0000-0000-0000-000000000000");
 	}
@@ -65,8 +64,6 @@ public class GlobalDefs
 
 	public Guid ZERO_GUID;
 
-	public bool mResetPadList;
-
 	public static bool GraphicsConfigFileRead;
 
 	public static bool AnalyticsEnabled = true;
@@ -76,8 +73,6 @@ public class GlobalDefs
 	public static AudioInfo OutputAudio = default(AudioInfo);
 
 	public static bool bFirstRun = true;
-
-	public static int NoOfAudioAdapters;
 
 	private static int m_CacheSize;
 

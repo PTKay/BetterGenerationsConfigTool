@@ -18,8 +18,6 @@ public struct OutputAdapterInfo
 
 	public bool bVSync;
 
-	public bool bWindowed;
-
 	public uint DepthFormat;
 
 	public bool DisplayMode;

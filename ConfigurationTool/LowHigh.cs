@@ -5,17 +5,7 @@ namespace Generations_Launcher_Front
 {
 	public struct LowHigh
 	{
-		public string DisplayName
-		{
-			get
-			{
-				if (this.bIsHigh)
-				{
-					return LocalizedText.High_Combo;
-				}
-				return LocalizedText.Low_Combo;
-			}
-		}
+		public string DisplayName => bIsHigh ? LocalizedText.High_Combo : LocalizedText.Low_Combo;
 
 		public bool bIsHigh;
 	}

@@ -26,8 +26,17 @@ namespace Generations_Launcher_Front
 			this.TabWindow.TabPages[2].Controls.Add(value3);
 			AudioConfiguration value4 = new AudioConfiguration();
 			this.TabWindow.TabPages[3].Controls.Add(value4);
+			AdvancedConfiguration value5 = new AdvancedConfiguration();
+			this.TabWindow.TabPages[4].Controls.Add(value5);
 			FileHandler fileHandler = new FileHandler();
 			fileHandler.LoadGraphicsFile();
+			if (!fileHandler.LoadAdvancedConfiguration())
+			{
+				GlobalDefs.CacheEnabled = 0;
+				GlobalDefs.CacheSize = 100;
+				GlobalDefs.CacheBlockSize = 100;
+				GlobalDefs.StreamingRate = 0;
+			}
 			if (!fileHandler.LoadAudioConfiguration())
 			{
 				GlobalDefs.OutputAudio.description = "Default";
@@ -79,9 +88,10 @@ namespace Generations_Launcher_Front
 			this.TabWindow.TabPages[1].Text = LocalizedText.GraphicsConfiguration;
 			this.TabWindow.TabPages[2].Text = LocalizedText.StatsConfiguration;
 			this.TabWindow.TabPages[3].Text = LocalizedText.AudioConfiguration;
+			this.TabWindow.TabPages[4].Text = LocalizedText.AdvancedConfiguration;
 			this.SaveButton.Text = LocalizedText.Save_Button;
 			this.LaunchButton.Text = LocalizedText.SaveQuit_Button;
-			this.CancelConfigButton.Text = LocalizedText.Cancel_Button;
+			this.QuitConfigButton.Text = LocalizedText.Cancel_Button;
 		}
 
 		private void LaunchButton_Click(object Sender, EventArgs e)
@@ -91,7 +101,7 @@ namespace Generations_Launcher_Front
 			Application.Exit();
 		}
 
-		private void CancelButton_Click(object sender, EventArgs e)
+		private void QuitButton_Click(object sender, EventArgs e)
 		{
 			Application.Exit();
 		}
@@ -100,14 +110,6 @@ namespace Generations_Launcher_Front
 		{
 			FileHandler fileHandler = new FileHandler();
 			fileHandler.SaveFile();
-		}
-
-		private void tabPage1_Click(object sender, EventArgs e)
-		{
-		}
-
-		private void tabPage2_Click(object sender, EventArgs e)
-		{
 		}
 
 		private bool InitExterns;
