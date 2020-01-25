@@ -17,7 +17,7 @@ Fixes/Changes so far:
 - Disabling window resizing and maximize button, since it breaks with that
 
 Along with this, some discoveries have been made:
-- The config tool has unused checkboxes for its items. The VSync and Shadow options were previously a checkbox, but then later changed to a combo box. In the middle of those, there's a checkbox for a windowed mode, which remained unused in the final game. The game does not read this though, so this is removed in the tool.
+- The config tool has unused checkboxes for its items. The VSync and Shadow options were previously a checkbox, but then later changed to a combo box. In the middle of those, there's a checkbox for a windowed mode, which remained unused in the final game. The game does not read this though, so this has been removed from the tool.
 - The config tool also has an unused tab called "Advanced Configuration". The game, apparently, ignores this file, even though the EXE has a listing for the file. This tab has been restored and it's fully working, although the game itself appears to ignore it completely.
 
 ## Images
