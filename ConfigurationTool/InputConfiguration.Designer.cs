@@ -994,6 +994,7 @@ namespace Generations_Launcher_Front
 			this.pictureBox1.TabIndex = 18;
 			this.pictureBox1.TabStop = false;
 			this.pictureBox1.Visible = false;
+			this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 			this.Instructions_label.BackColor = SystemColors.AppWorkspace;
 			this.Instructions_label.Location = new Point(12, 435);
 			this.Instructions_label.Name = "Instructions_label";
@@ -1007,6 +1008,7 @@ namespace Generations_Launcher_Front
 			this.pictureBox2.Size = new Size(834, 403);
 			this.pictureBox2.TabIndex = 20;
 			this.pictureBox2.TabStop = false;
+			this.pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
 			this.StartButtonInstructions_Label.Font = new Font("Microsoft Sans Serif", 8.25f, FontStyle.Bold, GraphicsUnit.Point, 0);
 			this.StartButtonInstructions_Label.Location = new Point(92, 4);
 			this.StartButtonInstructions_Label.Name = "StartButtonInstructions_Label";

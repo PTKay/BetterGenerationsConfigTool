@@ -65,6 +65,7 @@ namespace Generations_Launcher_Front
 			this.pictureBox1.Size = new Size(846, 460);
 			this.pictureBox1.TabIndex = 3;
 			this.pictureBox1.TabStop = false;
+			this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 			base.AutoScaleDimensions = new SizeF(6f, 13f);
 			base.AutoScaleMode = AutoScaleMode.Font;
 			base.Controls.Add(this.Analytics_Label);

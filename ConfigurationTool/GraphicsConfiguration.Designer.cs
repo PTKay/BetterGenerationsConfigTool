@@ -22,6 +22,7 @@ namespace Generations_Launcher_Front
 		private void InitializeComponent()
 		{
 			ComponentResourceManager componentResourceManager = new ComponentResourceManager(typeof(GraphicsConfiguration));
+			this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
 			this.Adapter_Combo = new ComboBox();
 			this.Resolution_Combo = new ComboBox();
 			this.AA_Combo = new ComboBox();
@@ -112,7 +113,7 @@ namespace Generations_Launcher_Front
 			this.Reflection_Combo.SelectedIndexChanged += this.Reflection_Combo_SelectedIndexChanged;
 			this.Shadow_Label.Location = new Point(20, 232);
 			this.Shadow_Label.Name = "Shadow_Label";
-			this.Shadow_Label.Size = new Size(128, 16);
+			this.Shadow_Label.Size = new Size(128, 15);
 			this.Shadow_Label.TabIndex = 16;
 			this.Reflection_Label.Location = new Point(20, 282);
 			this.Reflection_Label.Name = "Reflection_Label";
@@ -124,6 +125,7 @@ namespace Generations_Launcher_Front
 			this.pictureBox1.Size = new Size(846, 460);
 			this.pictureBox1.TabIndex = 18;
 			this.pictureBox1.TabStop = false;
+			this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 			this.Vsync_combo.DropDownStyle = ComboBoxStyle.DropDownList;
 			this.Vsync_combo.FormattingEnabled = true;
 			this.Vsync_combo.Location = new Point(20, 348);

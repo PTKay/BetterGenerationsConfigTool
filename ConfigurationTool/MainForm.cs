@@ -78,6 +78,12 @@ namespace Generations_Launcher_Front
 		{
 			IntPtr hinstance = Marshal.GetHINSTANCE(base.GetType().Module);
 			IntPtr handle = base.Handle;
+			try
+			{
+				DllExterns.NvAPI_Initialize();
+			}
+			catch { }
+				
 			return DllExterns._InitialiseDirectXInput(hinstance, handle) && DllExterns._InitialiseDirectX() && DllExterns._InitialiseDirectSound();
 		}
 

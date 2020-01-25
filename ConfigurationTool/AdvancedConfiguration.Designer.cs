@@ -42,6 +42,7 @@ namespace Generations_Launcher_Front
 			this.pictureBox1.Size = new Size(846, 460);
 			this.pictureBox1.TabIndex = 0;
 			this.pictureBox1.TabStop = false;
+			this.pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 			this.EnableCachingGroup.Controls.Add(this.StreamingRateCombo);
 			this.EnableCachingGroup.Controls.Add(this.StreamingRate_Label);
 			this.EnableCachingGroup.Controls.Add(this.CacheBlockSizeScroll_Label);

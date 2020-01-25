@@ -67,4 +67,7 @@ public class DllExterns
 
 	[DllImport("DXInputHandler.dll")]
 	public static extern int _PopulateDeviceList();
+	
+	[DllImport("nvapi.dll")]
+	public static extern int NvAPI_Initialize();
 }

@@ -70,8 +70,8 @@ public class FileHandler
 			list.Add((GlobalDefs.OutputAdapter.ShadQuality ? 1 : 0).ToString());
 			list.Add((GlobalDefs.OutputAdapter.ReflectQuality ? 1 : 0).ToString());
 			list.Add((GlobalDefs.OutputAdapter.DisplayMode ? 1 : 0).ToString());
-			list.Add(GlobalDefs.OutputAdapter.DeviceGUID.ToString());
-			list.Add(GlobalDefs.OutputAdapter.AdapterID);
+			list.Add("");
+			list.Add("");
 			list.Add(GlobalDefs.OutputAdapter.DepthFormat.ToString());
 		}
 		else

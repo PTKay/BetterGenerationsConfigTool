@@ -1,4 +1,5 @@
-﻿using Generations_Launcher_Front.Properties;
+﻿using System.Windows.Forms;
+using Generations_Launcher_Front.Properties;
 
 namespace Generations_Launcher_Front
 {
@@ -13,148 +14,146 @@ namespace Generations_Launcher_Front
 			base.Dispose(disposing);
 		}
 
+		/// <summary>
+		/// Required method for Designer support - do not modify
+		/// the contents of this method with the code editor.
+		/// </summary>
 		private void InitializeComponent()
-        {
-            this.TabWindow = new System.Windows.Forms.TabControl();
-            this.InputConfig = new System.Windows.Forms.TabPage();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.LaunchButton = new System.Windows.Forms.Button();
-            this.SaveButton = new System.Windows.Forms.Button();
-            this.QuitConfigButton = new System.Windows.Forms.Button();
-            this.TabWindow.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // TabWindow
-            // 
-            this.TabWindow.Controls.Add(this.InputConfig);
-            this.TabWindow.Controls.Add(this.tabPage1);
-            this.TabWindow.Controls.Add(this.tabPage2);
-            this.TabWindow.Controls.Add(this.tabPage3);
-            this.TabWindow.Controls.Add(this.tabPage4);
-            this.TabWindow.Location = new System.Drawing.Point(12, 12);
-            this.TabWindow.Name = "TabWindow";
-            this.TabWindow.SelectedIndex = 0;
-            this.TabWindow.Size = new System.Drawing.Size(854, 486);
-            this.TabWindow.TabIndex = 0;
-            // 
-            // InputConfig
-            // 
-            this.InputConfig.AutoScroll = true;
-            this.InputConfig.Location = new System.Drawing.Point(4, 22);
-            this.InputConfig.Name = "InputConfig";
-            this.InputConfig.Padding = new System.Windows.Forms.Padding(3);
-            this.InputConfig.Size = new System.Drawing.Size(846, 460);
-            this.InputConfig.TabIndex = 0;
-            this.InputConfig.Text = "tabPage1";
-            this.InputConfig.UseVisualStyleBackColor = true;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(846, 460);
-            this.tabPage1.TabIndex = 1;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(846, 460);
-            this.tabPage2.TabIndex = 2;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(846, 460);
-            this.tabPage3.TabIndex = 3;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage3";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(846, 460);
-            this.tabPage4.TabIndex = 4;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // LaunchButton
-            // 
-            this.LaunchButton.Location = new System.Drawing.Point(239, 510);
-            this.LaunchButton.Name = "LaunchButton";
-            this.LaunchButton.Size = new System.Drawing.Size(400, 56);
-            this.LaunchButton.TabIndex = 1;
-            this.LaunchButton.UseVisualStyleBackColor = true;
-            this.LaunchButton.Click += new System.EventHandler(this.LaunchButton_Click);
-            // 
-            // SaveButton
-            // 
-            this.SaveButton.Location = new System.Drawing.Point(16, 510);
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(217, 56);
-            this.SaveButton.TabIndex = 2;
-            this.SaveButton.UseVisualStyleBackColor = true;
-            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
-            // 
-            // CancelConfigButton
-            // 
-            this.QuitConfigButton.Location = new System.Drawing.Point(645, 510);
-            this.QuitConfigButton.Name = "QuitConfigButton";
-            this.QuitConfigButton.Size = new System.Drawing.Size(217, 56);
-            this.QuitConfigButton.TabIndex = 3;
-            this.QuitConfigButton.UseVisualStyleBackColor = true;
-            this.QuitConfigButton.Click += new System.EventHandler(this.QuitButton_Click);
-            // 
-            // MainForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(878, 578);
-            this.Controls.Add(this.QuitConfigButton);
-            this.Controls.Add(this.SaveButton);
-            this.Controls.Add(this.LaunchButton);
-            this.Controls.Add(this.TabWindow);
-            this.Icon = global::Generations_Launcher_Front.Properties.Resources.SystemTray;
-            this.Name = "MainForm";
-            this.Text = "MainForm";
-            this.Load += new System.EventHandler(this.MainForm_Load);
-            this.TabWindow.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+		{
+			System.ComponentModel.ComponentResourceManager resources =
+				new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+			this.TabWindow = new System.Windows.Forms.TabControl();
+			this.InputConfig = new System.Windows.Forms.TabPage();
+			this.GraphicsConfig = new System.Windows.Forms.TabPage();
+			this.StatsConfig = new System.Windows.Forms.TabPage();
+			this.AudioConfig = new System.Windows.Forms.TabPage();
+			this.AdvancedConfig = new System.Windows.Forms.TabPage();
+			this.LaunchButton = new System.Windows.Forms.Button();
+			this.SaveButton = new System.Windows.Forms.Button();
+			this.QuitConfigButton = new System.Windows.Forms.Button();
+			this.TabWindow.SuspendLayout();
+			this.SuspendLayout();
+			// 
+			// TabWindow
+			// 
+			this.TabWindow.Controls.Add(this.InputConfig);
+			this.TabWindow.Controls.Add(this.GraphicsConfig);
+			this.TabWindow.Controls.Add(this.StatsConfig);
+			this.TabWindow.Controls.Add(this.AudioConfig);
+			this.TabWindow.Controls.Add(this.AdvancedConfig);
+			this.TabWindow.Location = new System.Drawing.Point(14, 14);
+			this.TabWindow.Name = "TabWindow";
+			this.TabWindow.SelectedIndex = 0;
+			this.TabWindow.Size = new System.Drawing.Size(996, 561);
+			this.TabWindow.TabIndex = 0;
+			// 
+			// InputConfig
+			// 
+			this.InputConfig.AutoScroll = true;
+			this.InputConfig.Location = new System.Drawing.Point(4, 24);
+			this.InputConfig.Name = "InputConfig";
+			this.InputConfig.Padding = new System.Windows.Forms.Padding(3);
+			this.InputConfig.Size = new System.Drawing.Size(988, 533);
+			this.InputConfig.TabIndex = 0;
+			this.InputConfig.Text = "tabPage1";
+			this.InputConfig.UseVisualStyleBackColor = true;
+			// 
+			// GraphicsConfig
+			// 
+			this.GraphicsConfig.Location = new System.Drawing.Point(4, 22);
+			this.GraphicsConfig.Name = "GraphicsConfig";
+			this.GraphicsConfig.Padding = new System.Windows.Forms.Padding(3);
+			this.GraphicsConfig.Size = new System.Drawing.Size(988, 535);
+			this.GraphicsConfig.TabIndex = 1;
+			this.GraphicsConfig.Text = "tabPage2";
+			this.GraphicsConfig.UseVisualStyleBackColor = true;
+			// 
+			// StatsConfig
+			// 
+			this.StatsConfig.Location = new System.Drawing.Point(4, 22);
+			this.StatsConfig.Name = "StatsConfig";
+			this.StatsConfig.Padding = new System.Windows.Forms.Padding(3);
+			this.StatsConfig.Size = new System.Drawing.Size(988, 535);
+			this.StatsConfig.TabIndex = 2;
+			this.StatsConfig.Text = "tabPage3";
+			this.StatsConfig.UseVisualStyleBackColor = true;
+			// 
+			// AudioConfig
+			// 
+			this.AudioConfig.Location = new System.Drawing.Point(4, 22);
+			this.AudioConfig.Name = "AudioConfig";
+			this.AudioConfig.Padding = new System.Windows.Forms.Padding(3);
+			this.AudioConfig.Size = new System.Drawing.Size(988, 535);
+			this.AudioConfig.TabIndex = 3;
+			this.AudioConfig.Text = "tabPage4";
+			this.AudioConfig.UseVisualStyleBackColor = true;
+			// 
+			// AdvancedConfig
+			// 
+			this.AdvancedConfig.Location = new System.Drawing.Point(4, 22);
+			this.AdvancedConfig.Name = "AdvancedConfig";
+			this.AdvancedConfig.Padding = new System.Windows.Forms.Padding(3);
+			this.AdvancedConfig.Size = new System.Drawing.Size(988, 535);
+			this.AdvancedConfig.TabIndex = 4;
+			this.AdvancedConfig.Text = "tabPage5";
+			this.AdvancedConfig.UseVisualStyleBackColor = true;
+			// 
+			// LaunchButton
+			// 
+			this.LaunchButton.Location = new System.Drawing.Point(279, 588);
+			this.LaunchButton.Name = "LaunchButton";
+			this.LaunchButton.Size = new System.Drawing.Size(467, 65);
+			this.LaunchButton.TabIndex = 1;
+			this.LaunchButton.UseVisualStyleBackColor = true;
+			this.LaunchButton.Click += new System.EventHandler(this.LaunchButton_Click);
+			// 
+			// SaveButton
+			// 
+			this.SaveButton.Location = new System.Drawing.Point(19, 588);
+			this.SaveButton.Name = "SaveButton";
+			this.SaveButton.Size = new System.Drawing.Size(253, 65);
+			this.SaveButton.TabIndex = 2;
+			this.SaveButton.UseVisualStyleBackColor = true;
+			this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+			// 
+			// QuitConfigButton
+			// 
+			this.QuitConfigButton.Location = new System.Drawing.Point(752, 588);
+			this.QuitConfigButton.Name = "QuitConfigButton";
+			this.QuitConfigButton.Size = new System.Drawing.Size(253, 65);
+			this.QuitConfigButton.TabIndex = 3;
+			this.QuitConfigButton.UseVisualStyleBackColor = true;
+			this.QuitConfigButton.Click += new System.EventHandler(this.QuitButton_Click);
+			// 
+			// MainForm
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoScroll = true;
+			this.AutoSize = true;
+			this.BackColor = System.Drawing.SystemColors.Control;
+			this.ClientSize = new System.Drawing.Size(1024, 667);
+			this.Controls.Add(this.QuitConfigButton);
+			this.Controls.Add(this.SaveButton);
+			this.Controls.Add(this.LaunchButton);
+			this.Controls.Add(this.TabWindow);
+			this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
+			this.Name = "MainForm";
+			this.Text = "MainForm";
+			this.Load += new System.EventHandler(this.MainForm_Load);
+			this.TabWindow.ResumeLayout(false);
+			this.ResumeLayout(false);
 		}
 
 		private global::System.ComponentModel.IContainer components;
-
-		private global::System.Windows.Forms.TabControl TabWindow;
-
-		private global::System.Windows.Forms.TabPage tabPage1;
-
-		private global::System.Windows.Forms.Button LaunchButton;
-
-		private global::System.Windows.Forms.Button SaveButton;
-
-		private global::System.Windows.Forms.TabPage tabPage2;
-
-		private global::System.Windows.Forms.Button QuitConfigButton;
-
-		private global::System.Windows.Forms.TabPage tabPage3;
-
-		private global::System.Windows.Forms.TabPage tabPage4;
-		
-		private global::System.Windows.Forms.TabPage InputConfig;
+		private System.Windows.Forms.TabPage InputConfig;
+		private System.Windows.Forms.TabPage AdvancedConfig;
+		private System.Windows.Forms.TabPage AudioConfig;
+		private System.Windows.Forms.Button QuitConfigButton;
+		private System.Windows.Forms.TabPage StatsConfig;
+		private System.Windows.Forms.Button SaveButton;
+		private System.Windows.Forms.Button LaunchButton;
+		private System.Windows.Forms.TabPage GraphicsConfig;
+		private System.Windows.Forms.TabControl TabWindow;
 	}
 }
