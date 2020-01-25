@@ -22,7 +22,6 @@ namespace Generations_Launcher_Front
 		private void InitializeComponent()
 		{
 			ComponentResourceManager componentResourceManager = new ComponentResourceManager(typeof(GraphicsConfiguration));
-			this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
 			this.Adapter_Combo = new ComboBox();
 			this.Resolution_Combo = new ComboBox();
 			this.AA_Combo = new ComboBox();

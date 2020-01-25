@@ -127,7 +127,7 @@ public class FileHandler
 	public bool LoadPadConfigurations()
 	{
 		RegistryData registryData = new RegistryData();
-		string text = "DefaultInput.cfg";
+		const string text = "DefaultInput.cfg";
 		string text2 = registryData.ReadSaveLocationFromRegistry + "\\PlayerInput.cfg";
 		try
 		{
@@ -160,10 +160,7 @@ public class FileHandler
 		}
 		GlobalDefs.OutputAdapter.AdapterDescription = array[1];
 		GlobalDefs.OutputAdapter.AdapterName = array[2];
-		string[] array2 = array[3].Split(new char[]
-		{
-			'.'
-		});
+		string[] array2 = array[3].Split('.');
 		Regex regex = new Regex("[^0-9]");
 		GlobalDefs.OutputAdapter.OutputRes.Width = Convert.ToInt32(regex.Replace(array2[0], string.Empty));
 		GlobalDefs.OutputAdapter.OutputRes.Height = Convert.ToInt32(regex.Replace(array2[1], string.Empty));
@@ -174,14 +171,6 @@ public class FileHandler
 		GlobalDefs.OutputAdapter.ShadQuality = (regex2.Replace(array[6], string.Empty) == "1");
 		GlobalDefs.OutputAdapter.ReflectQuality = (regex2.Replace(array[7], string.Empty) == "1");
 		GlobalDefs.OutputAdapter.DisplayMode = (regex2.Replace(array[8], string.Empty) == "1");
-		string text = array[9];
-		string[] array3 = text.Split('-');
-		if (array3.Length != 5 || array3[0].Length != 8 || array3[1].Length != 4 || array3[2].Length != 4 || array3[3].Length != 4 || array3[4].Length != 12)
-		{
-			return false;
-		}
-		GlobalDefs.OutputAdapter.DeviceGUID = new Guid(text);
-		GlobalDefs.OutputAdapter.AdapterID = array[10];
 		GlobalDefs.OutputAdapter.DepthFormat = Convert.ToUInt32(regex.Replace(array[11], string.Empty));
 		GlobalDefs.OutputAdapter.ValidAdapter = true;
 		return true;
@@ -218,10 +207,7 @@ public class FileHandler
 		}
 		GlobalDefs.OutputAudio.description = array[0];
 		string text = array[1];
-		string[] array2 = text.Split(new char[]
-		{
-			'-'
-		});
+		string[] array2 = text.Split('-');
 		if (array2.Length != 5 || array2[0].Length != 8 || array2[1].Length != 4 || array2[2].Length != 4 || array2[3].Length != 4 || array2[4].Length != 12)
 		{
 			return false;

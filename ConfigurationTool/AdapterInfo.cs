@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 [StructLayout(LayoutKind.Sequential, Pack = 1)]
 public struct AdapterInfo
 {
-	public string DisplayName => this.DisplayNo == -1 ? this.AdapterDescription : string.Concat(this.AdapterDescription, " (#", this.DisplayNo, ")");
+	public string DisplayName => this.DisplayNo == -1 ? this.AdapterDescription : string.Concat(this.AdapterDescription, " (Display ", this.DisplayNo + 1, ")");
 
 	[MarshalAs(UnmanagedType.ByValArray, SizeConst = 16)]
 	public int[] AAList;
