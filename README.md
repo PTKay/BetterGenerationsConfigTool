@@ -4,10 +4,22 @@ An improved configuration tool for Sonic Generations, using [Sajid's](https://gi
 This aims to maintain the same design as the original configuration tool, but with some tweaks
 in order to improve performance and design inconsistencies.
 
-Fixes so far:
+Fixes/Changes so far:
 - Aligned text of the Graphics Configuration pane
 - Removed repeated title in Graphics Configuration pane
 - Added system tray icon
 - Changed name of the Antialiasing setting to "Antialiasing (FXAA)"
 - Improved resolution list by simplifying the algorithm
 - Improved algorithm to set global definition of the analytics option
+- Removed a bunch of unused code/variables/fields
+- Removed outline around the images in the first 2 tabs
+- Renamed the button "Cancel" to "Quit"
+- Disabling window resizing and maximize button, since it breaks with that
+
+Along with this, some discoveries have been made:
+- The config tool has unused checkboxes for its items. In the middle of those, there's a checkbox for a windowed mode, which remained unused in the final game. The game does not read this though, so this is removed in the tool.
+- The config tool also has an unused tab called "Advanced Configuration". The game, apparently, ignores this file, even though the EXE has a listing for the file. This tab has been restored and it's fully working, although the game itself appears to ignore it completely.
+
+## Images
+![Graphics Options](https://raw.githubusercontent.com/PTKickass/BetterGenerationsConfigTool/master/Images/Graphics.png)
+![Advanced Options](https://raw.githubusercontent.com/PTKickass/BetterGenerationsConfigTool/master/Images/Advanced.png)
