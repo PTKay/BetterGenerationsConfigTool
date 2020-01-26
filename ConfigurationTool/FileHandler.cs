@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 public class FileHandler
 {
-	private bool SavePadConfigurations()
+	private static bool SavePadConfigurations()
 	{
 		RegistryData registryData = new RegistryData();
 		string text = registryData.ReadSaveLocationFromRegistry;
@@ -55,7 +55,7 @@ public class FileHandler
 		return true;
 	}
 
-	private bool SaveGraphicsConfiguration()
+	private static bool SaveGraphicsConfiguration()
 	{
 		string path = "GraphicsConfig.cfg";
 		List<string> list = new List<string>();
@@ -82,7 +82,7 @@ public class FileHandler
 		return true;
 	}
 
-	public bool SaveAudioConfiguration()
+	public static bool SaveAudioConfiguration()
 	{
 		string path = "AudioConfig.cfg";
 		File.WriteAllLines(path, new List<string>
@@ -93,7 +93,7 @@ public class FileHandler
 		return true;
 	}
 
-	public bool SaveAdvancedConfiguration()
+	public static bool SaveAdvancedConfiguration()
 	{
 		string path = "AdvancedConfig.cfg";
 		File.WriteAllLines(path, new List<string>
@@ -106,7 +106,7 @@ public class FileHandler
 		return true;
 	}
 
-	private bool SaveStatsConfiguration()
+	private static bool SaveStatsConfiguration()
 	{
 		string path = "StatsConfig.cfg";
 		string contents = (GlobalDefs.AnalyticsEnabled ? 1 : 0).ToString();
@@ -114,17 +114,17 @@ public class FileHandler
 		return true;
 	}
 
-	public bool SaveFile()
+	public static bool SaveFile()
 	{
-		this.SavePadConfigurations();
-		this.SaveGraphicsConfiguration();
-		this.SaveAudioConfiguration();
-		this.SaveStatsConfiguration();
-		this.SaveAdvancedConfiguration();
+		SavePadConfigurations();
+		SaveGraphicsConfiguration();
+		SaveAudioConfiguration();
+		SaveStatsConfiguration();
+		SaveAdvancedConfiguration();
 		return true;
 	}
 
-	public bool LoadPadConfigurations()
+	public static bool LoadPadConfigurations()
 	{
 		RegistryData registryData = new RegistryData();
 		const string text = "DefaultInput.cfg";
@@ -133,11 +133,11 @@ public class FileHandler
 		{
 			if (File.Exists(text))
 			{
-				this.LoadInfoConfig(text, -1);
+				LoadInfoConfig(text, -1);
 			}
 			if (File.Exists(text2))
 			{
-				this.LoadInfoConfig(text2, -1);
+				LoadInfoConfig(text2, -1);
 			}
 		}
 		catch (Exception)
@@ -147,36 +147,41 @@ public class FileHandler
 		return true;
 	}
 
-	public bool LoadGraphicsConfiguration()
+	private static bool LoadGraphicsConfiguration()
 	{
-		if (!File.Exists("GraphicsConfig.cfg"))
+		if (!File.Exists("GraphicsConfig.cfg")) return false;
+		try
+		{
+			using (StreamReader sr = new StreamReader(new BufferedStream(File.Open("GraphicsConfig.cfg",FileMode.Open))))
+			{
+				sr.ReadLine(); // Skip first line
+				GlobalDefs.OutputAdapter.AdapterDescription = sr.ReadLine();
+				GlobalDefs.OutputAdapter.AdapterName = sr.ReadLine();
+				if (String.IsNullOrEmpty(GlobalDefs.OutputAdapter.AdapterDescription) || String.IsNullOrEmpty(GlobalDefs.OutputAdapter.AdapterName))
+				{
+					return false;
+				}
+				string[] res = sr.ReadLine().Split('.');
+				GlobalDefs.OutputAdapter.OutputRes.Width = int.Parse(res[0]);
+				GlobalDefs.OutputAdapter.OutputRes.Height = int.Parse(res[1]);
+				GlobalDefs.OutputAdapter.OutputRes.Refresh = int.Parse(res[2]);
+				GlobalDefs.OutputAdapter.AA = int.Parse(sr.ReadLine());
+				GlobalDefs.OutputAdapter.bVSync = int.Parse(sr.ReadLine()) > 0;
+				GlobalDefs.OutputAdapter.ShadQuality = int.Parse(sr.ReadLine()) > 0;
+				GlobalDefs.OutputAdapter.ReflectQuality = int.Parse(sr.ReadLine()) > 0;
+				GlobalDefs.OutputAdapter.DisplayMode = int.Parse(sr.ReadLine()) > 0;
+				GlobalDefs.OutputAdapter.DepthFormat = uint.Parse(sr.ReadLine());
+				GlobalDefs.OutputAdapter.ValidAdapter = true;
+				return true;
+			}
+		}
+		catch
 		{
 			return false;
 		}
-		string[] array = File.ReadAllLines("GraphicsConfig.cfg");
-		if (array.Length != 12)
-		{
-			return false;
-		}
-		GlobalDefs.OutputAdapter.AdapterDescription = array[1];
-		GlobalDefs.OutputAdapter.AdapterName = array[2];
-		string[] array2 = array[3].Split('.');
-		Regex regex = new Regex("[^0-9]");
-		GlobalDefs.OutputAdapter.OutputRes.Width = Convert.ToInt32(regex.Replace(array2[0], string.Empty));
-		GlobalDefs.OutputAdapter.OutputRes.Height = Convert.ToInt32(regex.Replace(array2[1], string.Empty));
-		GlobalDefs.OutputAdapter.OutputRes.Refresh = Convert.ToInt32(regex.Replace(array2[2], string.Empty));
-		GlobalDefs.OutputAdapter.AA = Convert.ToInt32(regex.Replace(array[4], string.Empty));
-		Regex regex2 = new Regex("[^0-1]");
-		GlobalDefs.OutputAdapter.bVSync = (regex2.Replace(array[5], string.Empty) == "1");
-		GlobalDefs.OutputAdapter.ShadQuality = (regex2.Replace(array[6], string.Empty) == "1");
-		GlobalDefs.OutputAdapter.ReflectQuality = (regex2.Replace(array[7], string.Empty) == "1");
-		GlobalDefs.OutputAdapter.DisplayMode = (regex2.Replace(array[8], string.Empty) == "1");
-		GlobalDefs.OutputAdapter.DepthFormat = Convert.ToUInt32(regex.Replace(array[11], string.Empty));
-		GlobalDefs.OutputAdapter.ValidAdapter = true;
-		return true;
 	}
 
-	public bool LoadAdvancedConfiguration()
+	public static bool LoadAdvancedConfiguration()
 	{
 		if (!File.Exists("AdvancedConfig.cfg"))
 		{
@@ -194,7 +199,7 @@ public class FileHandler
 		return true;
 	}
 
-	public bool LoadAudioConfiguration()
+	public static bool LoadAudioConfiguration()
 	{
 		if (!File.Exists("AudioConfig.cfg"))
 		{
@@ -216,13 +221,13 @@ public class FileHandler
 		return true;
 	}
 
-	public bool LoadGraphicsFile()
+	public static bool LoadGraphicsFile()
 	{
-		GlobalDefs.GraphicsConfigFileRead = this.LoadGraphicsConfiguration();
+		GlobalDefs.GraphicsConfigFileRead = LoadGraphicsConfiguration();
 		return true;
 	}
 
-	public bool LoadStatsConfiguration()
+	public static bool LoadStatsConfiguration()
 	{
 		if (!File.Exists("StatsConfig.cfg"))
 		{
@@ -237,13 +242,13 @@ public class FileHandler
 		return true;
 	}
 
-	public bool LoadFile()
+	public static bool LoadFile()
 	{
-		GlobalDefs.bFirstRun = !this.LoadStatsConfiguration();
-		return this.LoadPadConfigurations();
+		GlobalDefs.bFirstRun = !LoadStatsConfiguration();
+		return LoadPadConfigurations();
 	}
 
-	public bool LoadInfoConfig(string ConfigFileName, int PadIndex)
+	public static bool LoadInfoConfig(string ConfigFileName, int PadIndex)
 	{
 		string[] array = File.ReadAllLines(ConfigFileName);
 		List<string> list = new List<string>();

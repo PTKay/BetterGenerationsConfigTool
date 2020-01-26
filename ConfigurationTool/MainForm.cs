@@ -14,30 +14,28 @@ namespace Generations_Launcher_Front
 		public MainForm()
 		{
 			this.InitializeComponent();
-			this.InitExterns = false;
+			this.FormBorderStyle = FormBorderStyle.FixedDialog;
+			this.StartPosition = FormStartPosition.CenterScreen;
+			this.MaximizeBox = false;
 			this.InitExterns = this.InitializeExternals();
 			RegistryData registryData = new RegistryData();
 			Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(registryData.LCID);
-			InputConfiguration value = new InputConfiguration();
-			this.TabWindow.TabPages[0].Controls.Add(value);
-			GraphicsConfiguration value2 = new GraphicsConfiguration();
-			this.TabWindow.TabPages[1].Controls.Add(value2);
-			StatsConfiguration value3 = new StatsConfiguration();
-			this.TabWindow.TabPages[2].Controls.Add(value3);
-			AudioConfiguration value4 = new AudioConfiguration();
-			this.TabWindow.TabPages[3].Controls.Add(value4);
-			AdvancedConfiguration value5 = new AdvancedConfiguration();
-			this.TabWindow.TabPages[4].Controls.Add(value5);
-			FileHandler fileHandler = new FileHandler();
-			fileHandler.LoadGraphicsFile();
-			if (!fileHandler.LoadAdvancedConfiguration())
+			
+			this.TabWindow.TabPages[0].Controls.Add(new InputConfiguration());
+			this.TabWindow.TabPages[1].Controls.Add(new GraphicsConfiguration());
+			this.TabWindow.TabPages[2].Controls.Add(new StatsConfiguration());
+			this.TabWindow.TabPages[3].Controls.Add(new AudioConfiguration());
+			this.TabWindow.TabPages[4].Controls.Add(new AdvancedConfiguration());
+			
+			FileHandler.LoadGraphicsFile();
+			if (!FileHandler.LoadAdvancedConfiguration())
 			{
 				GlobalDefs.CacheEnabled = 0;
 				GlobalDefs.CacheSize = 100;
 				GlobalDefs.CacheBlockSize = 100;
 				GlobalDefs.StreamingRate = 0;
 			}
-			if (!fileHandler.LoadAudioConfiguration())
+			if (!FileHandler.LoadAudioConfiguration())
 			{
 				GlobalDefs.OutputAudio.description = "Default";
 				GlobalDefs.OutputAudio.AudioGuid = new Guid("FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF");
@@ -69,8 +67,7 @@ namespace Generations_Launcher_Front
 				Application.Exit();
 			}
 			this.SetFormText();
-			FileHandler fileHandler = new FileHandler();
-			fileHandler.LoadFile();
+			FileHandler.LoadFile();
 			this.TabWindow.SelectedIndex = 1;
 		}
 
@@ -78,12 +75,6 @@ namespace Generations_Launcher_Front
 		{
 			IntPtr hinstance = Marshal.GetHINSTANCE(base.GetType().Module);
 			IntPtr handle = base.Handle;
-			try
-			{
-				DllExterns.NvAPI_Initialize();
-			}
-			catch { }
-				
 			return DllExterns._InitialiseDirectXInput(hinstance, handle) && DllExterns._InitialiseDirectX() && DllExterns._InitialiseDirectSound();
 		}
 
@@ -100,10 +91,9 @@ namespace Generations_Launcher_Front
 			this.QuitConfigButton.Text = LocalizedText.Cancel_Button;
 		}
 
-		private void LaunchButton_Click(object Sender, EventArgs e)
+		private void LaunchButton_Click(object sender, EventArgs e)
 		{
-			FileHandler fileHandler = new FileHandler();
-			fileHandler.SaveFile();
+			FileHandler.SaveFile();
 			Application.Exit();
 		}
 
@@ -114,8 +104,7 @@ namespace Generations_Launcher_Front
 
 		private void SaveButton_Click(object sender, EventArgs e)
 		{
-			FileHandler fileHandler = new FileHandler();
-			fileHandler.SaveFile();
+			FileHandler.SaveFile();
 		}
 
 		private bool InitExterns;

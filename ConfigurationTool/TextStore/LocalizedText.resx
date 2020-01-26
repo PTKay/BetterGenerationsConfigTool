@@ -263,9 +263,6 @@ Reinstall to restore the DefaultInput.cfg file.</value>
   <data name="AudioDevice_label" xml:space="preserve">
     <value>Audio Device</value>
   </data>
-  <data name="Windowed_Check" xml:space="preserve">
-    <value>Run in Windowed Mode</value>
-  </data>
   <data name="InputTypeLabel" xml:space="preserve">
     <value>Input Type</value>
   </data>

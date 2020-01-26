@@ -537,15 +537,6 @@ namespace Generations_Launcher_Front.TextStore {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Run in Windowed Mode.
-        /// </summary>
-        public static string Windowed_Check {
-            get {
-                return ResourceManager.GetString("Windowed_Check", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Xbox 360 Controller for Windows.
         /// </summary>
         public static string Xbox_Pad_Name {

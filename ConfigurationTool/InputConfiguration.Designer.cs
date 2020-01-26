@@ -780,7 +780,6 @@ namespace Generations_Launcher_Front
 
 		private void ResetDefaultButton_Click(object sender, EventArgs e)
 		{
-			FileHandler fileHandler = new FileHandler();
 			int num = 0;
 			string text = "DefaultInput.cfg";
 			if (File.Exists(text))
@@ -790,7 +789,7 @@ namespace Generations_Launcher_Front
 				{
 					if (padInfo.mProductGuid == outputConfig.mProductGuid)
 					{
-						fileHandler.LoadInfoConfig(text, num);
+						FileHandler.LoadInfoConfig(text, num);
 						break;
 					}
 					num++;

@@ -10,12 +10,7 @@ namespace Generations_Launcher_Front
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new MainForm
-			{
-				FormBorderStyle = FormBorderStyle.FixedDialog,
-				StartPosition = FormStartPosition.CenterScreen,
-				MaximizeBox = false
-			});
+			Application.Run(new MainForm());
 		}
 	}
 }
