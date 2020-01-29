@@ -70,7 +70,7 @@ public class FileHandler
 			list.Add((GlobalDefs.OutputAdapter.ShadQuality ? 1 : 0).ToString());
 			list.Add((GlobalDefs.OutputAdapter.ReflectQuality ? 1 : 0).ToString());
 			list.Add((GlobalDefs.OutputAdapter.DisplayMode ? 1 : 0).ToString());
-			list.Add("");
+			list.Add(GlobalDefs.OutputAdapter.DeviceGUID.ToString());
 			list.Add("");
 			list.Add(GlobalDefs.OutputAdapter.DepthFormat.ToString());
 		}
@@ -170,6 +170,8 @@ public class FileHandler
 				GlobalDefs.OutputAdapter.ShadQuality = int.Parse(sr.ReadLine()) > 0;
 				GlobalDefs.OutputAdapter.ReflectQuality = int.Parse(sr.ReadLine()) > 0;
 				GlobalDefs.OutputAdapter.DisplayMode = int.Parse(sr.ReadLine()) > 0;
+				GlobalDefs.OutputAdapter.DeviceGUID = new Guid(sr.ReadLine());
+				sr.ReadLine(); // Skip unused monitor line
 				GlobalDefs.OutputAdapter.DepthFormat = uint.Parse(sr.ReadLine());
 				GlobalDefs.OutputAdapter.ValidAdapter = true;
 				return true;
