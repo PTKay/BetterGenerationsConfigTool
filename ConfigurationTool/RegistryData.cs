@@ -3,6 +3,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using Microsoft.Win32;
 using System.Diagnostics;
+using System.Reflection;
 
 public class RegistryData
 {
@@ -59,7 +60,7 @@ public class RegistryData
 			
 			var psi = new ProcessStartInfo
 			{
-				FileName = "ConfigurationTool.exe",
+				FileName = Assembly.GetExecutingAssembly().Location,
 				Arguments = fixType.ToString(),
 				Verb = "runas"
 			};
