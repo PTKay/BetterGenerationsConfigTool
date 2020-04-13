@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurationTool", "ConfigurationTool\ConfigurationTool.csproj", "{841BB644-9F7F-4193-836B-27865D404405}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F59B0F71-B4A2-4487-A5A6-21EADFC04179} = {F59B0F71-B4A2-4487-A5A6-21EADFC04179}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FixGensRegistry", "FixGensRegistry\FixGensRegistry.csproj", "{F59B0F71-B4A2-4487-A5A6-21EADFC04179}"
 EndProject
