@@ -353,4 +353,4 @@ MigrationBackup/
 .ionide/
 
 # idea folders
-.idea
+.idea/
