@@ -59,7 +59,7 @@ public class RegistryData
 			
 			var psi = new ProcessStartInfo
 			{
-				FileName = "FixGensRegistry.exe",
+				FileName = "ConfigurationTool.exe",
 				Arguments = fixType.ToString(),
 				Verb = "runas"
 			};
@@ -70,7 +70,6 @@ public class RegistryData
 			};
 			process.Start();
 			process.WaitForExit();
-			
 		}
 	}
 
