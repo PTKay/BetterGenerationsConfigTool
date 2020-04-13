@@ -35,10 +35,11 @@ namespace Generations_Launcher_Front
 					if (fixAll) goto case "2";
 					break;
 				case "2":
-					if (registryKey == null) registryKey = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Sega\\Sonic Generations");
+					if (registryKey == null) registryKey = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Sega\\Sonic Generations", true);
 					registryKey.SetValue("SaveLocation", "My Games\\Sonic Generations\\Saved Games");
 					break;
 			}
+			if (registryKey != null) registryKey.Close();
 		}
 	}
 }
