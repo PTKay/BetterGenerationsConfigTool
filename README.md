@@ -19,6 +19,7 @@ Fixes/Changes so far:
 - Implemented Nvidia Optimus support
 - Fixed transparency issues on higher DPI modes
 - Changed the graphics adapter combo box text to make displays start at 1, and changed it so it shows "(Display [])" instead of "(#[])"
+- Running the Configuration Tool will now fix the `Game files either missing or corrupt please reinstall` problem that occurs when copying Sonic Generations to another PC without installing it through Steam, making it now truly portable. You will know that the problem is being fixed once it asks you for admin rights when launching.
 
 Along with this, some discoveries have been made:
 - The config tool has unused checkboxes for its items. The VSync and Shadow options were previously a checkbox, but then later changed to a combo box. In the middle of those, there's a checkbox for a windowed mode, which remained unused in the final game. The game does not read this though, so this has been removed from the tool.
