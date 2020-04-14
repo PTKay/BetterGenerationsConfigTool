@@ -25,7 +25,7 @@ namespace Generations_Launcher_Front
 			this.TabWindow.TabPages[1].Controls.Add(new GraphicsConfiguration());
 			this.TabWindow.TabPages[2].Controls.Add(new StatsConfiguration());
 			this.TabWindow.TabPages[3].Controls.Add(new AudioConfiguration());
-			this.TabWindow.TabPages[4].Controls.Add(new AdvancedConfiguration());
+			//this.TabWindow.TabPages[4].Controls.Add(new AdvancedConfiguration());
 			
 			FileHandler.LoadGraphicsFile();
 			if (!FileHandler.LoadAdvancedConfiguration())
@@ -85,7 +85,7 @@ namespace Generations_Launcher_Front
 			this.TabWindow.TabPages[1].Text = LocalizedText.GraphicsConfiguration;
 			this.TabWindow.TabPages[2].Text = LocalizedText.StatsConfiguration;
 			this.TabWindow.TabPages[3].Text = LocalizedText.AudioConfiguration;
-			this.TabWindow.TabPages[4].Text = LocalizedText.AdvancedConfiguration;
+			//this.TabWindow.TabPages[4].Text = LocalizedText.AdvancedConfiguration;
 			this.SaveButton.Text = LocalizedText.Save_Button;
 			this.LaunchButton.Text = LocalizedText.SaveQuit_Button;
 			this.QuitConfigButton.Text = LocalizedText.Cancel_Button;

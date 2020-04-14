@@ -27,7 +27,7 @@ namespace Generations_Launcher_Front
 			this.GraphicsConfig = new System.Windows.Forms.TabPage();
 			this.StatsConfig = new System.Windows.Forms.TabPage();
 			this.AudioConfig = new System.Windows.Forms.TabPage();
-			this.AdvancedConfig = new System.Windows.Forms.TabPage();
+			//this.AdvancedConfig = new System.Windows.Forms.TabPage();
 			this.LaunchButton = new System.Windows.Forms.Button();
 			this.SaveButton = new System.Windows.Forms.Button();
 			this.QuitConfigButton = new System.Windows.Forms.Button();
@@ -40,7 +40,7 @@ namespace Generations_Launcher_Front
 			this.TabWindow.Controls.Add(this.GraphicsConfig);
 			this.TabWindow.Controls.Add(this.StatsConfig);
 			this.TabWindow.Controls.Add(this.AudioConfig);
-			this.TabWindow.Controls.Add(this.AdvancedConfig);
+			//this.TabWindow.Controls.Add(this.AdvancedConfig);
 			this.TabWindow.Location = new System.Drawing.Point(14, 14);
 			this.TabWindow.Name = "TabWindow";
 			this.TabWindow.SelectedIndex = 0;
@@ -90,6 +90,7 @@ namespace Generations_Launcher_Front
 			// 
 			// AdvancedConfig
 			// 
+			/*
 			this.AdvancedConfig.Location = new System.Drawing.Point(4, 22);
 			this.AdvancedConfig.Name = "AdvancedConfig";
 			this.AdvancedConfig.Padding = new System.Windows.Forms.Padding(3);
@@ -97,6 +98,7 @@ namespace Generations_Launcher_Front
 			this.AdvancedConfig.TabIndex = 4;
 			this.AdvancedConfig.Text = "tabPage5";
 			this.AdvancedConfig.UseVisualStyleBackColor = true;
+			*/
 			// 
 			// LaunchButton
 			// 
@@ -147,7 +149,7 @@ namespace Generations_Launcher_Front
 
 		private global::System.ComponentModel.IContainer components;
 		private System.Windows.Forms.TabPage InputConfig;
-		private System.Windows.Forms.TabPage AdvancedConfig;
+		//private System.Windows.Forms.TabPage AdvancedConfig;
 		private System.Windows.Forms.TabPage AudioConfig;
 		private System.Windows.Forms.Button QuitConfigButton;
 		private System.Windows.Forms.TabPage StatsConfig;
