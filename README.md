@@ -27,5 +27,5 @@ Along with this, some discoveries have been made:
 - The config tool normally generates a GraphicsConfig.cfg file everytime you save. Turns out some of the lines of that file are unused by the game, and can be left blank (the lines containing GUIDs). Sometimes, if not blank, the game will refuse to launch, so these lines have been made blank in this modified version.
 ## Image from release 1.0
 ![Graphics Options](https://raw.githubusercontent.com/PTKickass/BetterGenerationsConfigTool/master/Images/Graphics.png)
-## The unused Advanced Options tab
+## The unused Advanced Configuration tab
 ![Advanced Options](https://raw.githubusercontent.com/PTKickass/BetterGenerationsConfigTool/master/Images/Advanced.png)
