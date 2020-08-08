@@ -167,6 +167,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bcfg.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="DXInputHandler.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
