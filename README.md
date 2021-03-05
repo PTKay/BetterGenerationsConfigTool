@@ -24,7 +24,7 @@ Fixes/Changes so far:
 Discoveries so far:
 - The config tool has unused checkboxes for its items. The VSync and Shadow options were previously a checkbox, but then later changed to a combo box. In the middle of those, there's a checkbox for a windowed mode, which remained unused in the final game. The game does not read this though, so this has been removed from the tool.
 - The config tool has an unused tab called "Advanced Configuration". The game, apparently, ignores this file, even though the EXE has a listing for it. This tab can be restored and it's fully working, although the game itself appears to completely ignore its values.
-- The config tool normally generates a GraphicsConfig.cfg file everytime you save. Turns out some of the lines of that file are unused by the game, and can be left blank (the lines containing GUIDs). Sometimes, if not blank, the game will refuse to launch, so these lines have been made blank in this modified version.
+- The config tool normally generates a GraphicsConfig.cfg file everytime you save. Turns out some of the lines of that file seem to be unused by the game, and can be left blank (the lines containing GUIDs). Sometimes, if not blank, the game will refuse to launch, so these lines have been made blank in this modified version.
 
 ![Graphics Options](https://raw.githubusercontent.com/PTKickass/BetterGenerationsConfigTool/master/Images/Graphics.png)
 ## The unused Advanced Configuration tab
