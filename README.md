@@ -7,7 +7,7 @@ in order to improve performance and design inconsistencies.
 Fixes/Changes so far:
 - Aligned text of the Graphics Configuration pane
 - Removed repeated title in Graphics Configuration pane
-- Added system tray icon
+- Added taskbar icon
 - Changed name of the Antialiasing setting to "Antialiasing (FXAA)" to specify the tipe of AA used
 - Improved resolution list by simplifying the algorithm
 - Improved algorithm to set global definition of the analytics option
