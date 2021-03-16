@@ -16,7 +16,6 @@ Fixes/Changes so far:
 - Renamed the button "Cancel" to "Quit" (personal preference)
 - Disabled window resizing and the maximize button, since the window doesn't resize properly
 - Fix scaling issues with the background image of the tabs
-- Implemented Nvidia Optimus support (probably...)
 - Fixed transparency issues on higher DPI modes
 - Changed the graphics adapter combo box text to make displays start at 1, and changed it so it shows "(Display \[number])" instead of "(#\[number])"
 - Running the Configuration Tool will now fix the `Game files either missing or corrupt please reinstall` problem that occurs when copying Sonic Generations to another PC without installing it through Steam, making the game truly portable. You will know that the problem is being fixed once it asks you for admin rights when launching.
