@@ -1,8 +1,9 @@
 # Better Sonic Generations Config Tool
-An improved configuration tool for Sonic Generations, using [Sajid's](https://github.com/Sajidur78) decompilation as a base.
+An tweaked version of Sonic Generations' configuration tool, using [Sajid's](https://github.com/Sajidur78) decompilation as a base.
 
-This aims to maintain the same design as the original configuration tool, but with some tweaks
-in order to fix some issues and design inconsistencies.
+This aims to maintain the same design as the original configuration tool, but with some tweaks in order to fix some issues and design inconsistencies.
+
+Also available is a full-on complete rewrite of the configuration tool. [Check it out!](https://github.com/PTKickass/GenerationsConfigTool_Rewrite)
 
 Fixes/Changes so far:
 - Aligned text of the Graphics Configuration pane
