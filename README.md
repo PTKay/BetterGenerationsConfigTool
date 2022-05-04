@@ -1,9 +1,9 @@
+# You are probably looking for this instead: [Rewrite](https://github.com/PTKickass/GenerationsConfigTool_Rewrite)
+
 # Better Sonic Generations Config Tool
 A tweaked version of Sonic Generations' configuration tool, using [Sajid's](https://github.com/Sajidur78) decompilation as a base.
 
 This aims to maintain the same design as the original configuration tool, but with some tweaks in order to fix some issues and design inconsistencies.
-
-Also available is a full-on complete rewrite of the configuration tool. [Check it out!](https://github.com/PTKickass/GenerationsConfigTool_Rewrite)
 
 Fixes/Changes so far:
 - Aligned text of the Graphics Configuration pane
